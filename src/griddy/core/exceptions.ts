@@ -14,7 +14,7 @@
  */
 
 export interface ResponseData {
-  [key: string]: unknown;
+	[key: string]: unknown;
 }
 
 /**
@@ -24,29 +24,29 @@ export interface ResponseData {
  * catch all SDK errors with a single catch clause.
  */
 export class GriddyError extends Error {
-  /** Human-readable error description */
-  readonly message: string;
-  /** HTTP status code from the API response, if applicable */
-  readonly statusCode: number | null;
-  /** Raw response data from the API, if available */
-  readonly responseData: ResponseData;
+	/** Human-readable error description */
+	override readonly message: string;
+	/** HTTP status code from the API response, if applicable */
+	readonly statusCode: number | null;
+	/** Raw response data from the API, if available */
+	readonly responseData: ResponseData;
 
-  constructor(
-    message: string,
-    statusCode: number | null = null,
-    responseData: ResponseData | null = null
-  ) {
-    super(message);
-    this.name = 'GriddyError';
-    this.message = message;
-    this.statusCode = statusCode;
-    this.responseData = responseData ?? {};
+	constructor(
+		message: string,
+		statusCode: number | null = null,
+		responseData: ResponseData | null = null,
+	) {
+		super(message);
+		this.name = "GriddyError";
+		this.message = message;
+		this.statusCode = statusCode;
+		this.responseData = responseData ?? {};
 
-    // Maintains proper stack trace for where our error was thrown (only available on V8)
-    if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, this.constructor);
-    }
-  }
+		// Maintains proper stack trace for where our error was thrown (only available on V8)
+		if (Error.captureStackTrace) {
+			Error.captureStackTrace(this, this.constructor);
+		}
+	}
 }
 
 /**
@@ -56,14 +56,14 @@ export class GriddyError extends Error {
  * (5xx status codes) and client errors that don't fit more specific categories.
  */
 export class APIError extends GriddyError {
-  constructor(
-    message: string,
-    statusCode: number | null = null,
-    responseData: ResponseData | null = null
-  ) {
-    super(message, statusCode, responseData);
-    this.name = 'APIError';
-  }
+	constructor(
+		message: string,
+		statusCode: number | null = null,
+		responseData: ResponseData | null = null,
+	) {
+		super(message, statusCode, responseData);
+		this.name = "APIError";
+	}
 }
 
 /**
@@ -73,19 +73,19 @@ export class APIError extends GriddyError {
  * indicating too many requests have been made in a given time period.
  */
 export class RateLimitError extends GriddyError {
-  /** Number of seconds to wait before retrying, if provided by the API */
-  readonly retryAfter: number | null;
+	/** Number of seconds to wait before retrying, if provided by the API */
+	readonly retryAfter: number | null;
 
-  constructor(
-    message: string,
-    statusCode: number | null = null,
-    responseData: ResponseData | null = null,
-    retryAfter: number | null = null
-  ) {
-    super(message, statusCode, responseData);
-    this.name = 'RateLimitError';
-    this.retryAfter = retryAfter;
-  }
+	constructor(
+		message: string,
+		statusCode: number | null = null,
+		responseData: ResponseData | null = null,
+		retryAfter: number | null = null,
+	) {
+		super(message, statusCode, responseData);
+		this.name = "RateLimitError";
+		this.retryAfter = retryAfter;
+	}
 }
 
 /**
@@ -95,14 +95,14 @@ export class RateLimitError extends GriddyError {
  * indicating the requested resource does not exist.
  */
 export class NotFoundError extends GriddyError {
-  constructor(
-    message: string,
-    statusCode: number | null = null,
-    responseData: ResponseData | null = null
-  ) {
-    super(message, statusCode, responseData);
-    this.name = 'NotFoundError';
-  }
+	constructor(
+		message: string,
+		statusCode: number | null = null,
+		responseData: ResponseData | null = null,
+	) {
+		super(message, statusCode, responseData);
+		this.name = "NotFoundError";
+	}
 }
 
 /**
@@ -112,14 +112,14 @@ export class NotFoundError extends GriddyError {
  * indicating the request lacks valid authentication credentials.
  */
 export class AuthenticationError extends GriddyError {
-  constructor(
-    message: string,
-    statusCode: number | null = null,
-    responseData: ResponseData | null = null
-  ) {
-    super(message, statusCode, responseData);
-    this.name = 'AuthenticationError';
-  }
+	constructor(
+		message: string,
+		statusCode: number | null = null,
+		responseData: ResponseData | null = null,
+	) {
+		super(message, statusCode, responseData);
+		this.name = "AuthenticationError";
+	}
 }
 
 /**
@@ -129,12 +129,12 @@ export class AuthenticationError extends GriddyError {
  * either client-side or when the API returns a 400 status code.
  */
 export class ValidationError extends GriddyError {
-  constructor(
-    message: string,
-    statusCode: number | null = null,
-    responseData: ResponseData | null = null
-  ) {
-    super(message, statusCode, responseData);
-    this.name = 'ValidationError';
-  }
+	constructor(
+		message: string,
+		statusCode: number | null = null,
+		responseData: ResponseData | null = null,
+	) {
+		super(message, statusCode, responseData);
+		this.name = "ValidationError";
+	}
 }

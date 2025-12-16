@@ -2,11 +2,10 @@
  * Models module exports for NFL SDK.
  */
 
-// Enums
-export * from './enums';
-
 // Entities
-export * from './entities';
+export * from "./entities";
+// Enums
+export * from "./enums";
 
 // Requests
-export * from './requests';
+export * from "./requests";

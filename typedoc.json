@@ -1,0 +1,15 @@
+{
+  "entryPoints": ["src/index.ts"],
+  "plugin": ["typedoc-plugin-markdown"],
+  "outputs": [
+    {
+      "name": "html",
+      "path": "./docs/_build/html"
+    },
+    {
+      "name": "markdown",
+      "path": "./docs/_build/markdown"
+    }
+  ]
+
+}

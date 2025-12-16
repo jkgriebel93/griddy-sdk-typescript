@@ -2,11 +2,11 @@
  * Regular NFL Football endpoints.
  */
 
-export { Games } from './games';
 export type {
-  BoxScoreResponse,
-  PlayByPlayResponse,
-  GameStatsResponse,
-  WeeklyGameDetail,
-  RequestOptions,
-} from './games';
+	BoxScoreResponse,
+	GameStatsResponse,
+	PlayByPlayResponse,
+	RequestOptions,
+	WeeklyGameDetail,
+} from "./games";
+export { Games } from "./games";

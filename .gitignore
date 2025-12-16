@@ -8,6 +8,7 @@ dist/
 build/
 out/
 *.tsbuildinfo
+docs/_build/
 
 # IDE and editors
 .idea/
