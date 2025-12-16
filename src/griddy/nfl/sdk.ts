@@ -28,6 +28,7 @@ import {
  * Authentication information.
  */
 export interface NFLAuth {
+	[key: string]: unknown;
 	/** Access token */
 	accessToken: string;
 	/** Refresh token (optional) */

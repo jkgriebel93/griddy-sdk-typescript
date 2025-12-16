@@ -23,6 +23,7 @@ export interface ParamMetadata {
  * Request for getting football games.
  */
 export interface GetFootballGamesRequest {
+	[key: string]: unknown;
 	/** Season year */
 	season: number;
 	/** Type of season */
@@ -54,6 +55,7 @@ export const GetFootballGamesRequestMeta: Record<
  * Request for getting a box score.
  */
 export interface GetFootballBoxScoreRequest {
+	[key: string]: unknown;
 	/** Game identifier (UUID) */
 	gameId: string;
 }
@@ -72,6 +74,7 @@ export const GetFootballBoxScoreRequestMeta: Record<
  * Request for getting play-by-play data.
  */
 export interface GetPlayByPlayRequest {
+	[key: string]: unknown;
 	/** Game identifier (UUID) */
 	gameId: string;
 	/** Include penalty details */
@@ -104,6 +107,7 @@ export const GetPlayByPlayRequestMeta: Record<
  * Request for getting live game stats.
  */
 export interface GetLiveGameStatsRequest {
+	[key: string]: unknown;
 	/** Season year */
 	season: number;
 	/** Type of season */
@@ -128,6 +132,7 @@ export const GetLiveGameStatsRequestMeta: Record<
  * Request for getting weekly game details.
  */
 export interface GetWeeklyGameDetailsRequest {
+	[key: string]: unknown;
 	/** Season year */
 	season: number;
 	/** Season type */

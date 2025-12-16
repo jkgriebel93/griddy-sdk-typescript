@@ -65,7 +65,7 @@ export function parseDate(dateStr: string | null | undefined): Date | null {
 
 	// Try parsing as ISO 8601 first (most common)
 	const isoDate = new Date(dateStr);
-	if (!Number.isNan(isoDate.getTime())) {
+	if (!Number.isNaN(isoDate.getTime())) {
 		return isoDate;
 	}
 
@@ -137,7 +137,7 @@ export function safeInt(value: unknown): number | null {
 	}
 
 	const num = Number(value);
-	if (Number.isNan(num)) {
+	if (Number.isNaN(num)) {
 		return null;
 	}
 
@@ -156,7 +156,7 @@ export function safeFloat(value: unknown): number | null {
 	}
 
 	const num = Number(value);
-	if (Number.isNan(num)) {
+	if (Number.isNaN(num)) {
 		return null;
 	}
 

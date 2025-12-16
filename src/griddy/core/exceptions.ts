@@ -25,7 +25,7 @@ export interface ResponseData {
  */
 export class GriddyError extends Error {
 	/** Human-readable error description */
-	readonly message: string;
+	override readonly message: string;
 	/** HTTP status code from the API response, if applicable */
 	readonly statusCode: number | null;
 	/** Raw response data from the API, if available */

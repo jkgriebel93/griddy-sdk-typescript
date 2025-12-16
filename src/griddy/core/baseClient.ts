@@ -103,7 +103,7 @@ export class BaseClient {
 			const retryAfterHeader = response.headers.get("Retry-After");
 			if (retryAfterHeader) {
 				const parsed = parseInt(retryAfterHeader, 10);
-				if (!Number.isNan(parsed)) {
+				if (!Number.isNaN(parsed)) {
 					retryAfter = parsed;
 				}
 			}

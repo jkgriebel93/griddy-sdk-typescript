@@ -21,14 +21,9 @@ export {
 
 // Models
 export {
-	type APIResponse,
-	type Game,
 	isUnset,
 	type Nullable,
 	type OptionalNullable,
-	type Player,
-	type PlayerStats,
-	type Team,
 	UNSET,
 	type Unset,
 	valueOrDefault,
