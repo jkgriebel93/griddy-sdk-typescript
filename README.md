@@ -254,7 +254,7 @@ npm run lint
 
 ## Differences from Python SDK
 
-This TypeScript SDK is a port of the Python `griddy-sdk-python` package. See [PYTHON_VS_TYPESCRIPT_PATTERNS.md](./PYTHON_VS_TYPESCRIPT_PATTERNS.md) for details on the differences between the two implementations.
+This TypeScript SDK is a port of the Python `griddy-sdk-python` package. See [PYTHON_VS_TYPESCRIPT_PATTERNS.md](docs/PYTHON_VS_TYPESCRIPT_PATTERNS.md) for details on the differences between the two implementations.
 
 Key differences:
 - All methods are async (return Promises)
