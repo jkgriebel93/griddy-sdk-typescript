@@ -19,4 +19,4 @@
  * @packageDocumentation
  */
 
-export * from './griddy';
+export * from "./griddy";

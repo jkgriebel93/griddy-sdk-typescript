@@ -5,10 +5,14 @@
  */
 
 // Core module
-export * from './core';
-
-// Settings
-export { NFL, SERVERS, type NFLSettings, type ServerType, createNFLSettings } from './settings';
-
+export * from "./core";
 // NFL SDK
-export * from './nfl';
+export * from "./nfl";
+// Settings
+export {
+	createNFLSettings,
+	NFL,
+	type NFLSettings,
+	SERVERS,
+	type ServerType,
+} from "./settings";

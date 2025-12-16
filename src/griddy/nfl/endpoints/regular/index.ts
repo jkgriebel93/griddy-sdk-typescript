@@ -2,4 +2,4 @@
  * Regular NFL API endpoints.
  */
 
-export * from './football';
+export * from "./football";

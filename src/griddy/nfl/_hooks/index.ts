@@ -2,23 +2,21 @@
  * Hooks module exports.
  */
 
+export { createSDKHooks, SDKHooks } from "./sdkHooks";
 export type {
-  HookContext,
-  BeforeRequestContext,
-  AfterSuccessContext,
-  AfterErrorContext,
-  SDKInitHook,
-  BeforeRequestHook,
-  AfterSuccessHook,
-  AfterErrorHook,
-  AfterErrorResult,
-  Hooks,
-} from './types';
-
+	AfterErrorContext,
+	AfterErrorHook,
+	AfterErrorResult,
+	AfterSuccessContext,
+	AfterSuccessHook,
+	BeforeRequestContext,
+	BeforeRequestHook,
+	HookContext,
+	Hooks,
+	SDKInitHook,
+} from "./types";
 export {
-  createBeforeRequestContext,
-  createAfterSuccessContext,
-  createAfterErrorContext,
-} from './types';
-
-export { SDKHooks, createSDKHooks } from './sdkHooks';
+	createAfterErrorContext,
+	createAfterSuccessContext,
+	createBeforeRequestContext,
+} from "./types";
