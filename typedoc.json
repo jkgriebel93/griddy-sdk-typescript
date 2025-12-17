@@ -1,11 +1,11 @@
 {
+  "$schema": "https://typedoc.org/schema.json",
   "entryPoints": ["src/index.ts"],
-  "plugin": ["typedoc-material-theme"],
+  "plugin": ["typedoc-plugin-markdown"],
   "outputs": [
     {
       "name": "html",
-      "path": "./docs/_build/html",
-      "customCss": "./docs/extra.css"
+      "path": "./docs/_build/html"
     }
   ]
 

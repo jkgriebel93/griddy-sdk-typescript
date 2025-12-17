@@ -37,7 +37,7 @@
     "test:coverage": "vitest --coverage",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build",
-    "docs": "npx typedoc"
+    "docs:mkdocs-md": "typedoc"
   },
   "keywords": [
     "nfl",
@@ -71,7 +71,6 @@
     "tsup": "^8.0.1",
     "typedoc": "^0.28.15",
     "typedoc-plugin-markdown": "^4.9.0",
-    "typedoc-rhineai-theme": "1.0.2",
     "typescript": "^5.9.3",
     "vitest": "^4.0.15"
   }
