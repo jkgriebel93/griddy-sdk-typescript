@@ -1,0 +1,119 @@
+/* Griddy Electric Grid Color Palette */
+[data-md-color-scheme="griddy"] {
+  --md-text-font: "Inter";
+  --md-code-font: "JetBrains Mono";
+  --md-primary-fg-color: #7C3AED;        /* Electric Purple */
+  --md-primary-fg-color--light: #A78BFA;
+  --md-primary-fg-color--dark: #5B21B6;
+
+  --md-accent-fg-color: #06B6D4;          /* Cyan accent */
+  --md-accent-fg-color--transparent: rgba(6, 182, 212, 0.1);
+
+  /* Custom colors */
+  --griddy-amber: #F59E0B;
+  --griddy-purple-50: #F5F3FF;
+  --griddy-purple-100: #EDE9FE;
+  --griddy-purple-900: #4C1D95;
+}
+
+/* Typography - Space Grotesk for headings */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: 'Space Grotesk', var(--md-text-font-family), sans-serif;
+  font-weight: 700;
+}
+
+
+/* Code blocks styling */
+.md-typeset code,
+.md-typeset pre code,
+.md-typeset kbd {
+  font-family: var(--md-code-font), monospace;
+  background-color: var(--griddy-purple-50);
+  border-radius: 4px;
+}
+
+/* mkdocstrings specific styling */
+.doc-heading {
+    font-family: 'Space Grotesk', var(--md-text-font-family), serif;
+}
+
+.doc-symbol-toc {
+  font-size: 0.85em;
+}
+
+/* Function/method signature styling */
+.doc-signature {
+  background-color: var(--griddy-purple-50);
+  border-left: 4px solid var(--md-primary-fg-color);
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+[data-md-color-scheme="slate"] .doc-signature {
+  background-color: rgba(124, 58, 237, 0.1);
+}
+
+/* Parameter tables */
+.doc-param-name {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+}
+
+.doc-param-type {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  color: var(--md-accent-fg-color);
+}
+
+/* Source code toggle */
+details.quote {
+  border-color: var(--md-primary-fg-color);
+}
+
+details.quote summary {
+  color: var(--md-primary-fg-color);
+}
+
+/* Breadcrumb styling for nested modules */
+.md-typeset em:first-child {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85em;
+}
+
+/* Custom admonition for Pro API features */
+.md-typeset .admonition.pro,
+.md-typeset details.pro {
+  border-color: var(--griddy-amber);
+}
+.md-typeset .pro > .admonition-title,
+.md-typeset .pro > summary {
+  background-color: rgba(245, 158, 11, 0.1);
+}
+.md-typeset .pro > .admonition-title::before,
+.md-typeset .pro > summary::before {
+  background-color: var(--griddy-amber);
+  -webkit-mask-image: var(--md-admonition-icon--tip);
+  mask-image: var(--md-admonition-icon--tip);
+}
+
+/* SDK comparison table styling */
+.sdk-comparison-table th {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+}
+
+/* Navigation tabs customization */
+.md-tabs__link--active {
+  border-bottom: 3px solid var(--griddy-amber);
+}
+
+/* Footer customization */
+.md-footer {
+  background-color: var(--griddy-purple-900);
+}

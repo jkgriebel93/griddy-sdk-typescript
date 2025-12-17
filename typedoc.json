@@ -1,14 +1,11 @@
 {
   "entryPoints": ["src/index.ts"],
-  "plugin": ["typedoc-plugin-markdown"],
+  "plugin": ["typedoc-material-theme"],
   "outputs": [
     {
       "name": "html",
-      "path": "./docs/_build/html"
-    },
-    {
-      "name": "markdown",
-      "path": "./docs/_build/markdown"
+      "path": "./docs/_build/html",
+      "customCss": "./docs/extra.css"
     }
   ]
 
